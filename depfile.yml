@@ -12,14 +12,26 @@ layers:
     collectors:
       - type: className
         regex: .*Repository.*
-  - name: Service
+  - name: UseCase
     collectors:
       - type: className
-        regex: .*App\\Service.*
+        regex: .*App\\UseCase.*
+  - name: DTO
+    collectors:
+      - type: className
+        regex: .*App\\DTO.*
+  - name: Symfony
+    collectors:
+      - type: className
+        regex: .*Symfony.*
 
 ruleset:
   Controller:
-    - Service
-  Service:
+    - Symfony
+    - UseCase
+    - DTO
+  UseCase:
     - Repository
+    - DTO
   Repository:
+  DTO:
