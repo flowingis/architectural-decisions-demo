@@ -1,0 +1,11 @@
+parameters:
+    customRulesetUsed: true
+
+rules:
+    - App\Test\DtoObjectsShouldHaveNameEndingInData
+
+services:
+	-
+		class: App\Test\DtoObjectsShouldHaveNameEndingInData
+		tags:
+			- phpstan.rules.rule
