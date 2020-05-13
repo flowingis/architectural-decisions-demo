@@ -1,4 +1,10 @@
 {
+    "amphp/amp": {
+        "version": "v2.4.4"
+    },
+    "amphp/byte-stream": {
+        "version": "v1.7.3"
+    },
     "composer/semver": {
         "version": "1.5.1"
     },
@@ -84,6 +90,12 @@
     "egulias/email-validator": {
         "version": "2.1.17"
     },
+    "felixfbecker/advanced-json-rpc": {
+        "version": "v3.1.1"
+    },
+    "felixfbecker/language-server-protocol": {
+        "version": "v1.4.0"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -105,6 +117,9 @@
     "monolog/monolog": {
         "version": "2.0.2"
     },
+    "netresearch/jsonmapper": {
+        "version": "v2.1.0"
+    },
     "nette/finder": {
         "version": "v2.5.2"
     },
@@ -122,6 +137,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.3"
+    },
+    "openlss/lib-array2xml": {
+        "version": "1.0.0"
     },
     "php": {
         "version": "7.3"
@@ -592,8 +610,17 @@
     "twig/twig": {
         "version": "v3.0.3"
     },
+    "vimeo/psalm": {
+        "version": "3.11.4"
+    },
     "webmozart/assert": {
         "version": "1.8.0"
+    },
+    "webmozart/glob": {
+        "version": "4.1.0"
+    },
+    "webmozart/path-util": {
+        "version": "2.3.0"
     },
     "zendframework/zend-code": {
         "version": "3.4.1"
