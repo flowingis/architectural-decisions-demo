@@ -1,0 +1,10 @@
+parameters:
+  #SlevomatCodingStandard\Sniffs\Classes\ModernClassNameReferenceSniff: ~
+
+  #sets:
+  #  - 'symfony'
+  #skip:
+  #  PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer: ~
+
+  #exclude_files:
+  #  - path/to/file
