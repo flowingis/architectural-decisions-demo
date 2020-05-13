@@ -2,10 +2,10 @@ parameters:
     customRulesetUsed: true
 
 rules:
-    - App\Test\DtoObjectsShouldHaveNameEndingInData
+    - App\Test\PHPStan\DtoObjectsShouldHaveNameEndingInData
 
 services:
 	-
-		class: App\Test\DtoObjectsShouldHaveNameEndingInData
+		class: App\Test\PHPStan\DtoObjectsShouldHaveNameEndingInData
 		tags:
 			- phpstan.rules.rule

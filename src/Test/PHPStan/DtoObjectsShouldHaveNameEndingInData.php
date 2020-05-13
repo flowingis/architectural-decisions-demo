@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Test;
+namespace App\Test\PHPStan;
 
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
@@ -22,16 +22,17 @@ class DtoObjectsShouldHaveNameEndingInData implements Rule
 
         $fullName = $node->namespacedName->toString();
 
-        if (false === !strpos('App\\DTO', $fullName)) {
+        $classIsInNamespaceData = strpos($fullName, 'App\DTO') !== false;
+        $classNameEndsInData = substr($fullName, -4) === 'Data';
+
+        if (!$classIsInNamespaceData) {
             return [];
         }
 
-        if ('Data' === substr($fullName, -4)) {
+        if ($classNameEndsInData) {
             return [];
         }
 
-        return [
-            "La classe $fullName deve avere il nome che termina in 'Data'",
-        ];
+        return ["La classe $fullName deve avere il nome che termina in 'Data'"];
     }
 }

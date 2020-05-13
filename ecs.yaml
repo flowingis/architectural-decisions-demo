@@ -1,10 +1,7 @@
 parameters:
-  #SlevomatCodingStandard\Sniffs\Classes\ModernClassNameReferenceSniff: ~
 
-  #sets:
-  #  - 'symfony'
-  #skip:
-  #  PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer: ~
+services:
+  App\Test\EasyCs\DtoObjectsShouldHaveNameEndingInData: ~
 
   #exclude_files:
   #  - path/to/file
