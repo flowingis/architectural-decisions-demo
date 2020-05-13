@@ -19,6 +19,12 @@ class WidgetRepository extends ServiceEntityRepository
         parent::__construct($registry, Widget::class);
     }
 
+    public function save(Widget $widget): void
+    {
+        $this->_em->persist($widget);
+        $this->_em->flush();
+    }
+
     // /**
     //  * @return Widget[] Returns an array of Widget objects
     //  */
