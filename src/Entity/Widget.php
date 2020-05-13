@@ -32,6 +32,11 @@ class Widget
      */
     private $created_at;
 
+    public function doAFabulousThing(): void
+    {
+        // I will, I promise
+    }
+
     public function getId(): ?int
     {
         return $this->id;

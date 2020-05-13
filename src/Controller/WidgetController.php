@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\DTO\DoStuffData;
 use App\Entity\Widget;
 use App\Form\WidgetType;
 use App\Repository\WidgetRepository;
+use App\UseCase\DoStuff;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +17,18 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class WidgetController extends AbstractController
 {
+    /**
+     * @Route("/dostuff", name="widget_index", methods={"GET"})
+     */
+    public function doStuff(DoStuff $useCase, Request $request): Response
+    {
+        $dto = DoStuffData::create($request);
+
+        $useCase->doFabulousStuff($dto);
+
+        return new Response('all done');
+    }
+
     /**
      * @Route("/", name="widget_index", methods={"GET"})
      */
