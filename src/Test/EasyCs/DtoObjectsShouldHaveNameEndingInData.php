@@ -27,10 +27,10 @@ class DtoObjectsShouldHaveNameEndingInData implements Sniff
     {
         $fullName = ClassHelper::getFullyQualifiedName($phpcsFile, $pointer);
 
-        $classIsInNamespaceData = strpos($fullName, 'App\DTO') !== false;
+        $classIsInNamespaceDto = strpos($fullName, 'App\DTO') !== false;
         $classNameEndsInData = substr($fullName, -4) === 'Data';
 
-        if (!$classIsInNamespaceData) {
+        if (!$classIsInNamespaceDto) {
             return;
         }
 

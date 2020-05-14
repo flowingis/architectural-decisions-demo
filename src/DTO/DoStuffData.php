@@ -10,7 +10,7 @@ class DoStuffData
 
     public static function create(Request $request): DoStuffData
     {
-        $dto = new self;
+        $dto = new self();
         $dto->data = $request->request->get('data');
 
         return $dto;

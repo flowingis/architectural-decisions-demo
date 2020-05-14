@@ -22,10 +22,10 @@ class DtoObjectsShouldHaveNameEndingInData implements Rule
 
         $fullName = $node->namespacedName->toString();
 
-        $classIsInNamespaceData = strpos($fullName, 'App\DTO') !== false;
+        $classIsInNamespaceDto = strpos($fullName, 'App\DTO') !== false;
         $classNameEndsInData = substr($fullName, -4) === 'Data';
 
-        if (!$classIsInNamespaceData) {
+        if (!$classIsInNamespaceDto) {
             return [];
         }
 
